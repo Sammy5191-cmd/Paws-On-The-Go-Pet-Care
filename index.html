@@ -3,31 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paws On The Go - Pet Care</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Paws on the Go Pet Care</title>
+    <style>
+        body {
+            background-color: #fffaf0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        header {
+            background-color: #ff9f80;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #ff6f61;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .service-card {
+            background-color: #ffcba4;
+            border: 1px solid #ff6f61;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            width: calc(25% - 40px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff9f80;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="logo.svg" alt="Paws On The Go Logo">
-        <h1>Welcome to Paws On The Go - Your Pet Care Solution</h1>
+        <img src="logo.svg" alt="Paws on the Go Pet Care Logo">
+        <h1>Paws on the Go Pet Care</h1>
     </header>
-    <main>
-        <section>
-            <h2>Our Services</h2>
-            <ul>
-                <li>Dog Walking</li>
-                <li>Pet Sitting</li>
-                <li>Grooming</li>
-                <li>Training</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to <a href="mailto:info@pawson-the-go.com">email us</a>!</p>
-        </section>
-    </main>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services & Pricing</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Paws on the Go Pet Care! We provide top-notch pet care services, ensuring your furry friends are well taken care of while you're away. Our team is dedicated to giving your pets the love and attention they deserve.</p>
+    </section>
+    <section id="services">
+        <h2>Services & Pricing</h2>
+        <div class="service-card">
+            <h3>Basic Package</h3>
+            <p>Price: $20</p>
+        </div>
+        <div class="service-card">
+            <h3>Extended Walk</h3>
+            <p>Price: +$10</p>
+        </div>
+        <div class="service-card">
+            <h3>Extra Playtime</h3>
+            <p>Price: +$10</p>
+        </div>
+        <div class="service-card">
+            <h3>Vacation Bundle</h3>
+            <p>Price: $25</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Facebook: <a href="https://facebook.com/SamanthaHouston">Samantha Houston</a></p>
+        <p>Phone: 814-397-0758</p>
+        <form onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Send</button>
+        </form>
+        <script>
+            function submitForm(event) {
+                event.preventDefault();
+                alert('Form submitted!');
+                // Here you would handle the form submission (e.g., via AJAX)
+            }
+        </script>
+    </section>
     <footer>
-        <p>&copy; 2026 Paws On The Go - All Rights Reserved</p>
+        <p>&copy; 2026 Paws on the Go Pet Care. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
